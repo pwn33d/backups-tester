@@ -3,8 +3,8 @@ def testspeed():
     def statuscode(name, timeout=0.1):
         try:
             status = requests.get(url_name+"/"+name, allow_redirects=False)
-        except HTTPError as e:
-            return(e.code)
+        except:
+            return False
         if "incident id" in status.text or "access denied" in status.text:
                 return False
         elif len(status.text) <= 40:
