@@ -10,7 +10,7 @@ def testspeed():
         elif len(status.text) <= 40:
             return False
         if status.status_code == 200:
-            print(status.url+"\n"+str(status.status_code))
+            print(status.url+"\n"+str(status.status_code)+str(len(status.text)))
     try:
         url_name = sys.argv[1]
     except:
